@@ -1,0 +1,20 @@
+name: Documentation
+description: Suggest a documentation improvement
+title: "[Docs]: "
+labels: ["docs"]
+body:
+  - type: textarea
+    id: area
+    attributes:
+      label: Documentation area
+      description: Which part of the docs should be improved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: What should be added, changed, or clarified?
+    validations:
+      required: true

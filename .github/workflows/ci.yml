@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  foundation:
+    name: Foundation checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f LICENSE
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -f SECURITY.md
+          test -f CHANGELOG.md
+          test -f docs/roadmap.md
+          test -f docs/architecture.md
+          test -f docs/development.md
+          test -f docs/windows.md
+          test -f docs/settings.md
+          test -f .github/PULL_REQUEST_TEMPLATE.md
+          test -f .github/ISSUE_TEMPLATE/bug_report.yml
+          test -f .github/ISSUE_TEMPLATE/feature_request.yml
+          test -f .github/ISSUE_TEMPLATE/documentation.yml
+
+      - name: Make sure private notes are ignored
+        run: |
+          grep -q "NOTES.local.md" .gitignore

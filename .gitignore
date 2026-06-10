@@ -1,0 +1,54 @@
+# Personal notes
+NOTES.local.md
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Rust / Tauri
+target/
+src-tauri/target/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# App/package outputs
+*.msi
+*.exe
+*.dmg
+*.app
+*.deb
+*.rpm
+
+# Temporary files
+tmp/
+temp/
+.cache/
