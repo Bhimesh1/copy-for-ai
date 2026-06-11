@@ -29,6 +29,7 @@ out/
 # Rust / Tauri
 target/
 src-tauri/target/
+/target/
 
 # Python
 __pycache__/
@@ -52,3 +53,7 @@ venv/
 tmp/
 temp/
 .cache/
+
+# Local samples
+sample.*
+samples.local/

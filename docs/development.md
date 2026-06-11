@@ -50,3 +50,22 @@ Every pull request should pass:
 - Build
 
 These checks will be expanded as the project grows.
+
+
+## Running the CLI
+
+```bash
+cargo run -p copy-for-ai -- convert ./sample.txt
+```
+Running tests
+
+``cargo test``
+
+Formatting
+
+``cargo fmt``
+
+Linting
+```
+cargo clippy --all-targets --all-features
+```
