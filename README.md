@@ -37,6 +37,37 @@ The first target platform is Windows.
 
 Development instructions will be added in [`docs/development.md`](docs/development.md).
 
+## CLI preview
+
+The first development milestone is a small CLI.
+
+Example:
+
+```bash
+cargo run -p copy-for-ai -- convert ./sample.txt
+```
+
+Output formats:
+
+```
+cargo run -p copy-for-ai -- convert ./sample.txt --format markdown
+cargo run -p copy-for-ai -- convert ./sample.txt --format text
+cargo run -p copy-for-ai -- convert ./sample.txt --format prompt
+```
+
+Output styles:
+
+```
+cargo run -p copy-for-ai -- convert ./sample.txt --style clean
+cargo run -p copy-for-ai -- convert ./sample.txt --style compact
+cargo run -p copy-for-ai -- convert ./sample.txt --style detailed
+```
+
+Token estimate only:
+```
+cargo run -p copy-for-ai -- convert ./sample.txt --tokens-only
+```
+
 ## Roadmap
 
 See [`docs/roadmap.md`](docs/roadmap.md).
